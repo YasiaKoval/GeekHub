@@ -5,13 +5,22 @@ def calculus(num1, num2, operation):
     elif operation == '-':
         print('Результат віднімання: ', num1-num2)
     elif operation == '/':
-        print('Результат ділення: ', num1/num2)
+        if num2==0:
+            print('Ділити на нуль не можливо!')
+        else:
+            print('Результат ділення: ', num1/num2)
     elif operation == '*':
         print('Результат множення: ', num1*num2)
     elif operation == '//':
-        print('Результат ділення націло: ', num1//num2)
+        if num2==0:
+            print('Ділити на нуль не можливо!')
+        else:
+            print('Результат ділення націло: ', num1//num2)
     elif operation == '%':
-        print('Остача після ділення: ', num1 % num2)
+        if num2==0:
+            print('Ділити на нуль не можливо!')
+        else:
+            print('Остача після ділення: ', num1 % num2)
     elif operation == '^' or operation == '**':
         print('Результат піднесення до степеня: ', num1**num2)
     else:
