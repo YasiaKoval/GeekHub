@@ -3,5 +3,5 @@
 start_year = int(input("Введіть початковий рік: "))
 end_year = int(input("Введіть кінцевий рік: "))
 for years in range(start_year, end_year+1):
-    if years % 4 == 0:
+    if (years % 4 == 0 and years % 100 != 0) or years % 400 == 0:
         print(years, "- високосний рік")
