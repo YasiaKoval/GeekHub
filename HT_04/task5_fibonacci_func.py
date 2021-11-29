@@ -11,7 +11,8 @@ def fibonacci(fib_num):
 def all_fibonacci(fib_num2):
     printfib = []
     for fibnum in range(0, fib_num2):
-        printfib.append(fibonacci(fibnum))
+        if fibonacci(fibnum) < fib_num2:
+            printfib.append(fibonacci(fibnum))
     print(printfib)
 
 
