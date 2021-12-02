@@ -12,3 +12,11 @@
        3
        1
        .......'''
+
+
+def generator(iter):
+    for elem in iter:
+        print(elem)
+
+
+generator(input('Just put sth here '))
