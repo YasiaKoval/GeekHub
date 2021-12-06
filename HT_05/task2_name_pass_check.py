@@ -20,6 +20,7 @@ class NameException2(Exception):
 def check_func(name, password):
     if len(name) <= 3 or len(name) > 50:
         raise NameException("Ім'я має бути довше трьох літер та менше 50!!!")
+    pass_con = False
     for symbol in password:
         if symbol.isdigit():
             pass_con = True
