@@ -17,3 +17,22 @@
     Yellow     Red
     Red        Green
     .......'''
+import time
+
+
+def traffic_lights(light_num):
+    car_lights = ['Red', 'Yellow', 'Green']
+    peoples_lights = ['Red', 'Green']
+    while True:
+        for light in range(4):
+            print(car_lights[0], peoples_lights[1])
+            time.sleep(1)
+        for light in range(2):
+            print(car_lights[1], peoples_lights[1])
+            time.sleep(1)
+        for light in range(4):
+            print(car_lights[2], peoples_lights[0])
+            time.sleep(1)
+
+
+traffic_lights(10)
