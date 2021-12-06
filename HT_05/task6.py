@@ -14,13 +14,13 @@ def my_range(start, stop=None, step=1):
             yield start
             start += step
         else:
-            raise ValueError
+            return []
     elif step < 0:
         while start > stop:
             yield start
             start += step
         else:
-            raise ValueError
+            return []
 
 
 for rang_num in my_range():
