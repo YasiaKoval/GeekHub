@@ -33,6 +33,8 @@ def traffic_lights(light_num):
         for light in range(4):
             print(car_lights[2], peoples_lights[0])
             time.sleep(1)
+        for light in range(2):
+            print(car_lights[1], peoples_lights[0])
 
 
-traffic_lights(10)
+traffic_lights(12)
