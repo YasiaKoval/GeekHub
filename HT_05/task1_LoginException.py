@@ -9,16 +9,20 @@ class LoginException(Exception):
 
 
 def user(name, password, silent=False):
-    func_users = [['Anna', 47743, False], ['Scott', 36011, False],
-                  ['Alexander', 41384, False], ['Diaonisys', 51407, False]]
-    if [name, password, silent] in func_users == True:
-        return True
-    elif [name, password, silent] in func_users == False and silent == True:
-        return False
-    elif [name, password, silent] in func_users == False and silent == False:
-        raise LoginException(
-            "Ваше ім'я та пароль не занесено в нашу базу данних")
+    func_users = [['Anna', 47743], ['Scott', 36011],
+                  ['Alexander', 41384], ['Diaonisys', 51407]]
+    try:
+        if [name, password] in func_users:
+            silent = True
+        else:
+            if [name, password] in func_users == False and silent == True:
+                silent = False
+            elif [name, password] in func_users == False and silent == False:
+                raise LoginException()
+    except LoginException:
+        print("Ваше ім'я та пароль не занесено в нашу базу данних")
+    else:
+        return silent
 
 
-user(input("Введіть ваше ім'я (англ): "), int(input('Введіть ваш пароль: ')))
-print(user)
+print(user(input("Введіть ваше ім'я (англ): "), int(input('Введіть ваш пароль: '))))

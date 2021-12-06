@@ -14,9 +14,11 @@
        .......'''
 
 
-def generator(iter):
-    for elem in iter:
-        print(elem)
+def generator(iter_list):
+    while True:
+        for elem in iter_list:
+            yield(elem)
 
 
-generator(input('Just put sth here '))
+for elem in generator([1, 2, 3]):
+    print(elem)
