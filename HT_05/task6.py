@@ -3,6 +3,8 @@
 # P.P.S. Для повного розуміння цієї функції - можна почитати документацію по ній:
 # https: // docs.python.org/3/library/stdtypes.html  # range
 def my_range(start, stop=None, step=1):
+    if start == 0:
+        return []
     if stop == None:
         start, stop = 0, start
     if step == 0:
